@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G12a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iul-ga-ZbW">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--DEMO-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="jTT-1X-uqg">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jTT-1X-uqg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3Fb-MV-cF9"/>
+                            <constraint firstItem="jTT-1X-uqg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="CbZ-dc-rCR"/>
+                            <constraint firstItem="jTT-1X-uqg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="R8S-m0-R3L"/>
+                            <constraint firstItem="jTT-1X-uqg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="feO-dF-TL4"/>
+                            <constraint firstAttribute="trailing" secondItem="jTT-1X-uqg" secondAttribute="trailing" id="pbW-2A-vQr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jTT-1X-uqg" secondAttribute="bottom" id="u7L-dt-dxg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CbZ-dc-rCR"/>
+                                <exclude reference="R8S-m0-R3L"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="DEMO" id="LkZ-aq-G2X">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="SO7-Uv-FCL">
+                            <connections>
+                                <action selector="refresh:" destination="BYZ-38-t0r" id="KPf-yN-0KU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="scrollView" destination="jTT-1X-uqg" id="p2m-Fe-QXb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="123" y="341"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="i5h-jV-QZg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iul-ga-ZbW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aAz-d0-N5J">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="so5-A2-NxG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3J4-UP-2Jh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-260" y="341"/>
+        </scene>
+    </scenes>
+</document>
